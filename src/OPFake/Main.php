@@ -6,7 +6,9 @@ use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
-use pocketmine\Server;
+use pocketmine\command\CommandSender;
+use pocketmine\command\Command;
+
 class Main extends PluginBase implements Listener
 {
     public function onEnable()
