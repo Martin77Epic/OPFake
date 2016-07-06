@@ -25,8 +25,8 @@ class Main extends PluginBase implements Listener
         switch (strtolower($command->getName)){
             case "opfake"
 
-                $name = strtolower($args[0]);
-                $player = $sender->getServer()->getPlayer($name);
+                $name = strtolower($sender->getPlayer()->getName());
+                if($target = $sender->getServer()->getPlayer($args[0]))
                 if ($player instanceof Player){
                     if (!($sender->hasPermisson(m77e.opfake))); {
                         $sender->sendMessage(TextFormat::BLUE."Succesfully opfaked ".$player->getName());
@@ -37,8 +37,8 @@ class Main extends PluginBase implements Listener
             break;
 
             case "deopfake":
-                $name = strtolower($args[0]);
-                $player = $sender->getServer->getPlayer($name);
+                $name = strtolower($sender->getPlayer()->getName());
+                if($target = $sender->getServer()->getPlayer($args[0]))
                 if ($player instanceof Player) {
                     if (!($sender->hasPermisson(m77e.deopfake))) {
                         $sender->sendMessage(TextFormat::BLUE."Succesfully deopfaked".$player->getName());
