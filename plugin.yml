@@ -1,23 +1,15 @@
 name: OPFake
-author: Martin77Epic
-version: 1.0.0
+version: b1
+api: [1.0.0]
 main: OPFake\Main
-api: [1.0.0, 2.0.0]
 load: POSTWORLD
+author: Martin77Epic
 commands:
-  opfake:
-      description: OPFake commands
-      usage: "/opfake <player>"
-      permission: m77e.opfake
-  deopfake:
-      description: DEOPFake command
-      usage: "/deopfake <player>"
-      permission: m77e.deopfake
+  fakeop:
+    description: "Fake op any!"
+    usage: "/fakeop <player>"
+    permission: m77e.fakeop
 permissions:
-  m77e.opfake:
-    description: "Allows the user to run the opfake command"
+  m77e.opfake
+    description: "Allows to run opfake!"
     default: op
-  m77e.deopfake:
-    description: "Allows the user to run the deopfake command"
-    default: op
-
